@@ -27,12 +27,12 @@ namespace Base64StringEncoder
 
 
 
-        public static string GetDecodedString(string input)
+        private static string GetDecodedString(string input)
         {
             return System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(input));
         }
 
-        public static string GetEncodedString(string input)
+        private static string GetEncodedString(string input)
         {
             return Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(input));
         }
